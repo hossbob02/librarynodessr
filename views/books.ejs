@@ -1,0 +1,63 @@
+<%- include('parts/top.ejs')%>
+
+<!-- Page Content -->
+<div class="page-heading products-heading header-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-content">
+          <h4>new arrivals</h4>
+          <h2>sixteen products</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="products">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-12">
+        <div class="filters-content">
+            <div class="row grid">
+
+              <% for (let book of books) {%>
+                <div class="col-lg-4 col-md-4 all des">
+                  <div class="product-item">
+                    <a href="/books/<%= book._id %>" target="_blank"><img style="height: 350px;" src="/uploads/<%=book.image%>" alt=""></a>
+                    <div class="down-content">
+                      <a href="/books/<%= book._id %>" target="_blank"><h4><%=book.title%></h4></a>
+                      <h6>$<%=book.price%></h6>
+                      <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                      <ul class="stars">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                      <span>Reviews (12)</span>
+                    </div>
+                  </div>
+                </div>
+              <% } %> 
+            </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <ul class="pages">
+          <li><a href="#">1</a></li>
+          <li class="active"><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%-include('parts/bottom.ejs')%>
